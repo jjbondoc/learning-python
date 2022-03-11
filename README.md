@@ -1,5 +1,5 @@
 # learning-python
-a diary as I go and learn python fundamentals
+a diary as I go and learn some python 
 
 ## current learning path
 ### 1. fundamentals
