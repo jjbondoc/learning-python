@@ -1,5 +1,9 @@
+# importing an object from the sys module
+# argv = argument variable
+# it is a list that contains all the command-line arguments passed to the script
 from sys import argv
-#
+# unpacking argv, so that instead of holding all of the arguments,
+# each one is assigned to its own variable
 script, first, second, third = argv
 
 print("The first script is called:", script)
