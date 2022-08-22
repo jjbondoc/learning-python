@@ -1,12 +1,17 @@
+# from the sys module, import the exit function
+# allows the developer to exit from python
+# if 0 is passed, it's a successful exit
+# other integers can indicate an error
 from sys import exit
 
 def gold_room():
     print("This room is full of gold. How much do you take?")
 
     choice = input("> ")
-    if "0" in choice or "1" in choice:
-        how_much = int(choice)
-    else:
+    try:
+        if type(int(choice)) == type(0):
+            how_much = int(choice)
+    except ValueError:
         dead("Man, learn to type a number.")
 
     if how_much < 50:
@@ -23,6 +28,7 @@ def bear_room():
     print("How are you going to move the bear?")
     bear_moved = False
 
+    # you can exit the while loop through dead() and gold_room()
     while True:
         choice = input("> ")
 

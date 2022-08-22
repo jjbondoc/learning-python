@@ -1,0 +1,3 @@
+No,
+you don't need
+the target.truncate line.

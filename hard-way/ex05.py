@@ -1,4 +1,4 @@
-name = 'Joselit Bondoc'
+name = 'Joselito Bondoc'
 age = 24 # not a lie
 height = 172 # cm
 height_inches = round(height / 2.54)
