@@ -1,0 +1,31 @@
+/********************************TAG SELECTORS************************************/
+h1 {
+    color: red;
+    font-size: 200px;
+}
+
+
+img:hover {
+    background-color: gold;
+}
+
+
+/********************************CLASS SELECTORS************************************/
+/* Group similar elements that will have the same style */
+.bacon {
+    background-color: green;
+}
+
+.broccoli {
+    background-color: red;
+}
+
+.circular {
+    border-radius: 100%;
+}
+
+/********************************ID SELECTORS************************************/
+/* IDs can only be used once. Used to apply a specific style to a single element; therefore, they are more specific than class selectors */
+#heading {
+    color: blue
+}
