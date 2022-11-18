@@ -21,3 +21,7 @@ div {
     height: 200px;
     width: 200px;
 }
+
+.data {
+    text-decoration: underline;
+}
