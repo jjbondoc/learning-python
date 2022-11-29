@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import lxml
 import smtplib
+from decouple import config
 
 shopping_list = [
     {
@@ -26,8 +27,9 @@ headers = {
     "Accept-Language": "en-GB,en;q=0.5"
 }
 
-MY_EMAIL = "jbondoc.python@yahoo.com"
-PASSWORD = "grtmfduuemusltuh*"
+MY_EMAIL = config("MY_EMAIL")
+TO_EMAIL = config("TO_EMAIL")
+PASSWORD = config("PASSWORD")
 
 #TODO: Scrape the web page
 def scrape_price(url):
@@ -60,6 +62,6 @@ if len(draft_message()) > 0:
         connection.login(user=MY_EMAIL, password=PASSWORD)
         connection.sendmail(
             from_addr=MY_EMAIL,
-            to_addrs="jbondoc.python@gmail.com",
+            to_addrs=TO_EMAIL,
             msg=f"Subject: Alert! Amazon Price Tracker\n\n{draft_message()}\nBest,\nYour Amazon Price Tracker" # add two new lines to write the main body
         )
