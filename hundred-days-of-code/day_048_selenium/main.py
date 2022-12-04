@@ -31,4 +31,4 @@ for i in range(0, len(date_list)):
     
 print(event_dict)
 
-driver.quit() # quit the browser
+driver.quit() # quit the browserg
